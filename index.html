@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>imgEditor</title>
+	<!-- Ion Slider -->
+	<link rel="stylesheet" href="/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+	<!-- bootstrap slider -->
+	<link rel="stylesheet" href="/plugins/bootstrap-slider/css/bootstrap-slider.min.css">
+	
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/imgEditor.css">
+</head>
+<body>
+<input type="file" id="imagen"/>
+<form id="img">
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Ion Slider -->
+<script src="/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<!-- Bootstrap slider -->
+<script src="/plugins/bootstrap-slider/bootstrap-slider.min.js"></script>
+<script type="text/javascript" src="js/imgEditor.js"></script>
+<script>
+	load_imgEditor({
+		obj:"#img",
+		file:"imagen"
+	});
+</script>
+</body>
+</html>
