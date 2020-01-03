@@ -59,7 +59,7 @@ function load_imgEditor(data){
 	if(data.tamano){
 		if(data.tamano['width']){
 			if(data.tamano['width']>150){
-				max_width=data.tamano['width'];
+				max_width=(data.tamano['width']*(scala/100));
 			}else{
 				console.error("El width debe ser mayor a 150px");
 				return;
@@ -68,22 +68,14 @@ function load_imgEditor(data){
 
 		if(data.tamano['height']){
 			if(data.tamano['height']>150){
-				max_height=data.tamano['height'];
+				max_height=(data.tamano['height']*(scala/100));
 			}else{
 				console.error("El height debe ser mayor a 150px");
 				return;
 			}
 		}
 	}
-	$("#imgs_imgEditor").css("width",((max_width)*(parseInt(scala)/100))+"px");
-	$("#imgs_imgEditor").css("height",((max_height)*(parseInt(scala)/100))+"px");
-	if(max_width>max_height){
-		$("#imgEditor_preview img").css("height",((max_height)*(parseInt(scala)/100))+"px");
-		$("#imgEditor_preview img").css("width","auto");
-	}else{
-		$("#imgEditor_preview img").css("width",((max_width)*(parseInt(scala)/100))+"px");
-		$("#imgEditor_preview img").css("height","auto");
-	}
+	
 	html='';
     html+='<div id="preview_list">';
     html+='<div id="imgEditor_preview" ondragstart="dragStart_imgEditor(event)" ondrag="arras_imgEditor(event)">';
@@ -116,6 +108,15 @@ function load_imgEditor(data){
 	    	document.getElementById('imgs_imgEditor').style.backgroundImage="url("+images+')';
 	    };
     }
+    $("#imgs_imgEditor").css("width",max_width+"px");
+	$("#imgs_imgEditor").css("height",max_height+"px");
+	if(max_width>max_height){
+		$("#imgEditor_preview img").css("height",max_height+"px");
+		$("#imgEditor_preview img").css("width","auto");
+	}else{
+		$("#imgEditor_preview img").css("width",max_width+"px");
+		$("#imgEditor_preview img").css("height","auto");
+	}
 }
 function loadimg_imgEditor(imagen){
     document.getElementById('img_imgEditor').src=imagen;

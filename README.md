@@ -20,9 +20,9 @@ Para ver la demo de click aqui [Demo](http://plugins.tecnologiaswebsite.com/imgE
 
 	Array: Tiene todos los parametros que se necesitan para la creacion, los parametros son los siquientes:
 	
-	-obj[STRING]: es el id o la clase que va contener nuestro editor, debe usar los prefijos de Jquery para distingir los ("#", "."), el contenedor debe ser un form para guardar.
+	-obj[STRING]Requerido: es el id o la clase que va contener nuestro editor, debe usar los prefijos de Jquery para distingir los ("#", "."), el contenedor debe ser un form para guardar.
 
-	-file[STRING]: es el id del input file.
+	-file[STRING]Requerido: es el id del input file.
 
 	-circular[INT]: define si la captura es circular 0=no, 1=si.
 
